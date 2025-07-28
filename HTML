@@ -1,0 +1,162 @@
+# Restaurant-page-project
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>byteXL New Flavours - Restaurant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">byte<span class="xl">XL</span></div>
+    <ul class="nav-menu">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#menu">MENU</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#reservation">RESERVATION</a></li>
+      <li><a href="#location">LOCATION</a></li>
+      <li><a href="#blog">BLOG</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome To</h2>
+      <h1>byteXL New Flavours</h1>
+      <button onclick="document.getElementById('reservation').scrollIntoView({behavior: 'smooth'})">Book a Table</button>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>
+      At byteXL New Flavours, we blend tradition with innovation to serve exquisite dishes crafted with passion and fresh ingredients. Join us to enjoy a unique dining experience.
+    </p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <h2>Our Menu</h2>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="veg">Vegetarian</button>
+      <button class="filter-btn" data-filter="nonveg">Non-Vegetarian</button>
+      <button class="filter-btn" data-filter="special">Specials</button>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item veg">
+        <h3>Grilled Veggie Salad</h3>
+        <p>Fresh veggies grilled to perfection.</p>
+      </div>
+      <div class="menu-item nonveg">
+        <h3>Spicy Chicken Wings</h3>
+        <p>Juicy wings with our signature spicy sauce.</p>
+      </div>
+      <div class="menu-item special">
+        <h3>Chef’s Special Steak</h3>
+        <p>Premium steak with a secret marinade.</p>
+      </div>
+      <div class="menu-item veg">
+        <h3>Vegetable Pasta</h3>
+        <p>Homemade pasta with fresh garden veggies.</p>
+      </div>
+      <div class="menu-item nonveg">
+        <h3>Grilled Salmon</h3>
+        <p>Fresh salmon with lemon herb dressing.</p>
+      </div>
+      <div class="menu-item special">
+        <h3>Seasonal Fruit Tart</h3>
+        <p>A delightful dessert with fresh fruits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://www.shutterstock.com/image-photo/chickenchicken-tandooriroasted-chickengrilled-chickengreen-chutneysaucecoriander-260nw-2495910293.jpg" alt="Dining Area 1" />
+      <img src="https://media.istockphoto.com/id/1416818056/photo/colourful-vegan-bowl-with-quinoa-and-sweet-potato.jpg?s=612x612&w=0&k=20&c=t1I58CqucV6bLRaa4iDy7PIVjnV8D9eWDjEsX9X-87k=" alt="Dining Area 2" />
+      <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1698041024/d46b0de5144780b019a34a6d1f247fda.jpg" alt="Ambiance" />
+      <img src="https://t4.ftcdn.net/jpg/02/40/99/19/360_F_240991913_c22j6WvLgpqiUvjaLiLc5rh14WO8jShB.jpg" alt="Dish 1" />
+      <img src="https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=" alt="Dish 2" />
+      <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?cs=srgb&dl=pexels-pixabay-262047.jpg&fm=jpg" alt="Restaurant Interior" />
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservation" class="reservation-section">
+    <h2>Book a Table</h2>
+    <form id="reservation-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="date">Reservation Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Reservation Time</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="20" required />
+
+      <button type="submit">Confirm Reservation</button>
+    </form>
+    <p id="confirmation-msg" class="confirmation-msg"></p>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="location-section">
+    <h2>Our Location</h2>
+    <p>123 Culinary Street, Foodie City, Country</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019910508366!2d-122.41941548468114!3d37.77492977975988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c432f99d%3A0xa418b9b4a3e0a758!2sCulinary%20Institute%20of%20America!5e0!3m2!1sen!2sus!4v1615127693260!5m2!1sen!2sus" 
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <h2>From Our Blog</h2>
+    <article class="blog-post">
+      <h3>Discover the Secrets Behind Our Signature Dishes</h3>
+      <p>Our chefs share exclusive tips and stories that inspire our menu. Learn how we craft each dish to perfection.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="blog-post">
+      <h3>Seasonal Ingredients and Their Benefits</h3>
+      <p>We prioritize fresh, seasonal produce for the best flavor and nutrition. Explore our seasonal picks and recipes.</p>
+      <a href="#">Read More</a>
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Follow us on social media</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/yourrestaurant" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com/yourrestaurant" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://twitter.com/yourrestaurant" target="_blank" aria-label="Twitter">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" />
+      </a>
+    </div>
+    <p>&copy; 2025 byteXL New Flavours. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
